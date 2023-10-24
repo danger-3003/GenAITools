@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home Page</title>
     <style>
         .animate
         {
-            animation: moving 4s ease-in-out infinite;
+            animation: moving 6s ease-in-out infinite;
         }
         @keyframes moving 
         {
@@ -21,67 +26,87 @@
             {
                 clip-path: polygon(0 46%, 10% 48%, 20% 48%, 30% 43%, 38% 38%, 47% 36%, 57% 36%, 67% 39%, 74% 44%, 83% 44%, 93% 46%, 100% 44%, 100% 100%, 0 100%);            
             }
-        }            
+        }
+        .content-hidden
+        {
+            clip-path: circle(0% at 0% 0%);
+            transition: all 5s ease-in-out;
+        }
+        .group:hover .content-hidden
+        {
+            clip-path: circle(100%);
+        }           
     </style>
 </head>
-<body>
+<body style="font-family: 'Poppins', sans-serif;">
+    <header class="flex bg-white fixed justify-between items-center w-full z-10 shadow-xl">
+        <div class="font-bold text-xl lg:text-2xl mx-10 lg:mx-20 m-5">
+            <p style="font-family: 'Nosifer', sans-serif;">Tools AI</p>
+        </div>
+        <div class="font-semi text-xl mx-10 lg:mx-20 m-5">
+            <a href="" class="mx-4 transition-all duration-200 hover:font-bold">Designs</a>
+            <a href="" class="mx-4 transition-all duration-200 hover:font-bold">Content</a>
+            <a href="" class="mx-4 transition-all duration-200 hover:font-bold">PPT's</a>
+            <a href="" class="mx-4 transition-all duration-200 hover:font-bold">Image & Video</a>
+        </div>
+    </header>
     <div class="flex items-center justify-center flex-col">
-        <div class="relative flex items-center justify-center h-40 w-full">
-            <p class="absolute text-[15vw] sm:text-7xl md:text-8xl font-black text-transparent" style="-webkit-text-stroke: 1px blue">Gen AI Tools</p>
-            <p class="absolute text-[15vw] sm:text-7xl md:text-8xl font-black bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-400 text-transparent bg-clip-text animate" style="clip-path: polygon(0 50%, 11% 52%, 26% 58%, 37% 66%, 46% 70%, 60% 71%, 76% 66%, 88% 62%, 100% 60%, 100% 100%, 0 100%);">Gen AI Tools</p>
+        <div class="relative flex items-center justify-center h-40 w-full mt-20 mb-10">
+            <p class="absolute text-[15vw] sm:text-7xl md:text-8xl lg:text-9xl text-transparent" style="-webkit-text-stroke: 2px blue; font-family: 'Prompt', sans-serif;">Gen AI Tools</p>
+            <p class="absolute text-[15vw] sm:text-7xl md:text-8xl lg:text-9xl bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-400 text-transparent bg-clip-text animate" style="font-family: 'Prompt', sans-serif;">Gen AI Tools</p>
         </div>
         <div class="flex items-center justify-center flex-col flex-wrap md:mx-10 lg:mx-20">
             <div class="flex items-center justify-center flex-wrap" id="Designing">
-                <div class="group w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
+                <div class="group shadow-slate-200 shadow-lg w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
                     <div>
                         <img class="rounded-md" src="src/spline.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
+                    <div class="content-hidden flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md absolute transition-all duration-300 text-white">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quaerat illo impedit quas optio modi sed fuga beatae</p>
                         <a href="https://spline.design/" target="_blank" class="white font-semibold text-xl">Spline</a>
                     </div>
                 </div>
-                <div class="group w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
+                <div class="group shadow-slate-300 shadow-xl w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
                     <div>
                         <img class="rounded-md" src="src/figma.png " alt="">
                     </div>
-                    <div class="flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
+                    <div class="content-hidden flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quaerat illo impedit quas optio modi sed fuga beatae</p>
                         <a href="https://www.figma.com/" target="_blank" class="white font-semibold text-xl">Figma</a>
                     </div>
                 </div>
-                <div class="group w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
+                <div class="group shadow-slate-300 shadow-xl w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
                     <div>
                         <img class="rounded-md" src="src/canva.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
+                    <div class="content-hidden flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quaerat illo impedit quas optio modi sed fuga beatae</p>
                         <a href="https://www.canva.com/" target="_blank" class="white font-semibold text-xl">Canva</a>
                     </div>
                 </div>
-                <div class="group w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
+                <div class="group shadow-slate-300 shadow-xl w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
                     <div>
                         <img class="rounded-md" src="src/kittl.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
+                    <div class="content-hidden flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quaerat illo impedit quas optio modi sed fuga beatae</p>
                         <a href="https://www.kittl.com/" target="_blank" class="white font-semibold text-xl">Kittl</a>
                     </div>
                 </div>
-                <div class="group w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
+                <div class="group shadow-slate-300 shadow-xl w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
                     <div>
                         <img class="rounded-md" src="src/designs.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
+                    <div class="content-hidden flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quaerat illo impedit quas optio modi sed fuga beatae</p>
                         <a href="https://designs.ai/" target="_blank" class="white font-semibold text-xl">Designs.ai</a>
                     </div>
                 </div>
-                <div class="group w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
+                <div class="group shadow-slate-300 shadow-xl w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
                     <div>
                         <img class="rounded-md" src="src/spline.png" alt="">
                     </div>
-                    <div class="flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
+                    <div class="content-hidden flex items-center justify-center flex-col py-5 px-8 backdrop-blur-[2px] bg-gradient-to-b from-[#00000030] to-[#000000d7] w-full h-full rounded-md opacity-0 group-hover:opacity-100 absolute transition-all duration-300 text-white">
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel quaerat illo impedit quas optio modi sed fuga beatae</p>
                         <a href="https://spline.design/" target="_blank" class="white font-semibold text-xl">Spline</a>
                     </div>
