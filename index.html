@@ -6,22 +6,32 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Home Page</title>
+    <style>
+        .animate
+        {
+            animation: moving 4s ease-in-out infinite;
+        }
+        @keyframes moving 
+        {
+            0%,100%
+            {
+                clip-path: polygon(0 29%, 10% 34%, 18% 41%, 26% 47%, 35% 53%, 46% 58%, 57% 58%, 68% 56%, 77% 52%, 84% 48%, 93% 45%, 100% 25%, 100% 100%, 0 100%);
+            }
+            50%
+            {
+                clip-path: polygon(0 46%, 10% 48%, 20% 48%, 30% 43%, 38% 38%, 47% 36%, 57% 36%, 67% 39%, 74% 44%, 83% 44%, 93% 46%, 100% 44%, 100% 100%, 0 100%);            
+            }
+        }            
+    </style>
 </head>
 <body>
     <div class="flex items-center justify-center flex-col">
-        <div class="flex">
-            <div class="bg-slate-300 my-5 md:mx-3 lg:mx-5 scale-75 md:scale-90 lg:scale-100 hover:bg-[#ff0a0a] rounded-full h-16 w-16 flex items-center justify-center transition-colors duration-200">
-                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube text-[#ff0a0a] hover:text-white text-5xl transition-colors duration-200"></i></a>
-            </div>
-            <div class="bg-slate-300 my-5 md:mx-3 lg:mx-5 scale-75 md:scale-90 lg:scale-100 hover:bg-gradient-to-tr from-yellow-400 from-10% via-purple-500 via-40% to-pink-700 to-90% rounded-full h-16 w-16 flex items-center justify-center transition-all duration-200">
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram text-transparent bg-clip-text bg-gradient-to-tr from-yellow-400 from-10% via-purple-500 via-40% to-pink-700 to-90% rounded-xl hover:text-white text-5xl transition-all duration-200"></i></a>
-            </div>
-            <div class="bg-slate-300 my-5 md:mx-3 lg:mx-5 scale-75 md:scale-90 lg:scale-100 hover:bg-black rounded-full h-16 w-16 flex items-center justify-center transition-all duration-200">
-                <a href="https://github.com/"><i class="fa-brands fa-github text-black hover:text-white text-5xl transition-all duration-200"></i></a>
-            </div>
+        <div class="relative flex items-center justify-center h-40 w-full">
+            <p class="absolute text-8xl font-black text-transparent" style="-webkit-text-stroke: 1px blue">Gen AI Tools</p>
+            <p class="absolute text-8xl font-black bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-400 text-transparent bg-clip-text animate" style="clip-path: polygon(0 50%, 11% 52%, 26% 58%, 37% 66%, 46% 70%, 60% 71%, 76% 66%, 88% 62%, 100% 60%, 100% 100%, 0 100%);">Gen AI Tools</p>
         </div>
         <div class="flex items-center justify-center flex-col flex-wrap md:mx-10 lg:mx-20">
-            <div class="flex items-center justify-center flex-wrap">
+            <div class="flex items-center justify-center flex-wrap" id="Designing">
                 <div class="group w-64 lg:w-80 xl:w-96 h-max bg-slate-300 rounded-md my-5 mx-3 px-3 py-5 flex items-center justify-center flex-col relative">
                     <div>
                         <img class="rounded-md" src="src/spline.png" alt="">
