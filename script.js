@@ -1,6 +1,8 @@
 var menu=document.getElementById("menu");
 var button=document.getElementById("bars");
 var nav=document.querySelector(".nav");
+var note=document.getElementById("Notice");
+var cont=document.getElementById("continue");
 button.addEventListener("click",()=>
 {
     if(button.classList.contains("fa-bars"))
@@ -17,4 +19,8 @@ button.addEventListener("click",()=>
         menu.classList.replace("top-0","-top-28");
         menu.classList.add("opacity-0");
     }
+})
+cont.addEventListener('click', ()=>
+{
+    note.classList.add("hidden");
 })
