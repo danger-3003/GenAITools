@@ -1,3 +1,5 @@
+ScrollReveal().reveal('.reveal', {delay:0,easing:"ease-in-out",interval:10,scale:0.9,reset:true});
+
 var menu=document.getElementById("menu");
 var button=document.getElementById("bars");
 var nav=document.querySelector(".nav");
