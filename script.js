@@ -2,9 +2,21 @@ ScrollReveal().reveal('.reveal', {delay:0,easing:"ease-in-out",interval:10,scale
 
 var menu=document.getElementById("menu");
 var button=document.getElementById("bars");
-var nav=document.querySelector(".nav");
+var nav=document.querySelectorAll(".nav");
 var note=document.getElementById("Notice");
 var cont=document.getElementById("continue");
+nav.forEach(element=>{
+    element.addEventListener('click',()=>
+    {
+        if(button.classList.contains("fa-times"))
+        {
+            button.classList.replace("fa-times","fa-bars");
+            menu.classList.replace("h-[10.5rem]","h-0");
+            menu.classList.replace("top-0","-top-28");
+            menu.classList.add("opacity-0");
+        }
+    })
+})
 button.addEventListener("click",()=>
 {
     if(button.classList.contains("fa-bars"))
