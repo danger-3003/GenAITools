@@ -355,9 +355,12 @@
         </div>
         <div class="bg-[#4070f4] absolute -z-10 top-28 h-12 w-12"></div>
         <div class="h-max flex items-center justify-center flex-col md:flex-row">
+            <!-- contact form -->
             <div class="w-[30rem]">
                 <div class="py-10 mr-14">
-                    <div class="font-bold text-5xl">Contact Us</div>
+                    <div class="font-bold text-5xl flex items-center">Contact Us
+                        <div class="bg-[#4070f4] w-10 h-10 ml-5 rotate-90" style="clip-path: polygon(50% 0%, 0 100%, 100% 100%);"></div>
+                    </div>
                     <p class="my-5">Feel free to contact us any time. We'll get back to you as soon as we can!</p>
                     <form action="" id="contactform">
                         <div class="mb-4">
@@ -378,19 +381,49 @@
                     </form>
                 </div>
             </div>
-            <div class="relative bg-zinc-950 w-96 h-[23rem] rounded-md text-white p-8" style="box-shadow: rgba(0,0,0,0.5) 0px 3px 15px;">
+            <!-- contact details -->
+            <div class="relative bg-zinc-950 w-[27rem] h-max rounded-md text-white p-8" style="box-shadow: rgba(0,0,0,0.5) 0px 3px 15px;">
                 <div class="bg-[#4070f4] w-8 h-8 absolute -top-5 -left-5"></div>
-                <p class="text-2xl font-semibold">Info</p>
-                <div class="flex items-center">
-                    <i class="fa-regular fa-envelope text-2xl  text-white"></i>
-                    <p class="mx-5"><a href="mailto:naremsumanth@gmail.com">naremsumanth@gmail.com</a></p>
-                </div>
-                <div class="flex items-center">
-                    <i class="fa-solid fa-phone text text-2xl text-white"></i>
-                    <p class="mx-5"><a href="tel:+91 8519839971">+91 8519839971</a></p>
-                </div>
+                <p class="text-4xl font-semibold">Info</p>
                 <div>
-                    <i class="fa-solid fa-location-dot text-white"></i>
+                    <div class="flex items-center my-4">
+                        <div class="flex items-center justify-center h-10 w-10">
+                            <i class="fa-regular fa-envelope text-3xl text-white"></i>
+                        </div>
+                        <p class="mx-3 text-xl"><a href="mailto:naremsumanth@gmail.com">naremsumanth@gmail.com</a></p>
+                    </div>
+                    <div class="flex items-center my-4 ml-1">
+                        <div class="flex items-center justify-center h-10 w-10">
+                            <i class="fa-solid fa-phone text text-3xl text-white"></i>
+                        </div>
+                        <p class="mx-3 text-xl"><span><a class="my-4" href="tel:+91 8519839971">+918519839971</a></span>, <span><a class="my-4" href="tel:+91 7801078243">+917801078243</a></span>, <span><a class="my-4" href="tel:+91 6309357023">+916309357023</a></span></p>
+                    </div>
+                    <div class="flex items-center my-4">
+                        <div class="flex items-center justify-center h-10 w-10">
+                            <i class="fa-solid fa-location-dot text-3xl text-white"></i>
+                        </div>
+                        <p class="mx-3 text-xl">Visakhaptanam</p>
+                    </div>
+                </div>
+                <div id="icons" class="flex items-center justify-center w-full relative">
+                    <div id="instagram"><i class="fa-brands fa-instagram text-white font-medium text-3xl mx-3"></i></div>
+                    <div class="hidden" id="insta-acc">
+                        <div>Sumanth Narem</div>
+                        <div>Hima Varsha</div>
+                        <div>Ajith Reddy</div>
+                    </div>
+                    <div id="linkedin"><i class="fa-brands fa-linkedin text-white font-medium text-3xl mx-3"></i></div>
+                    <div class="hidden" id="linked-acc">
+                        <div>Sumanth Narem</div>
+                        <div>Hima Varsha</div>
+                        <div>Ajith Reddy</div>
+                    </div>
+                    <div id="github"><i class="fa-brands fa-github text-white text-3xl mx-3 font-medium"></i></div>
+                    <div class="hidden" id="git-acc">
+                        <div>Sumanth Narem</div>
+                        <div>Hima Varsha</div>
+                        <div>Ajith Reddy</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -404,5 +437,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
     <script src="firebase.js"></script>
     <script src="script.js"></script>
+    <script src="reveal.js"></script>
 </body>
 </html>
