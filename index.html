@@ -53,6 +53,15 @@
         {
             clip-path: circle(100%);
         }
+        @media screen and (max-width:320px) {
+            #black_main
+            {
+                width:90vw;
+            }
+            #contact_form{
+                width: 90vw;
+            }
+        }
     </style>
 </head>
 <body style="font-family: 'Poppins', sans-serif;">
@@ -71,7 +80,7 @@
             </div>
         </div>
     </section>
-    <header class="flex bg-white fixed justify-between items-center flex-col h-max md:flex-row w-full z-10 shadow-xl">
+    <header class="flex bg-white fixed justify-between items-center flex-col h-12 md:flex-row w-full z-10 shadow-xl">
         <div class="font-bold text-xl md:text-2xl lg:text-3xl mx-7 sm:mx-8 lg:mx-14 m-3 absolute left-0 md:relative">
             <p style="font-family: 'Nosifer', sans-serif;" class="w-max"><span class="text-blue-600">T</span><span class="text-yellow-500">o</span><span class="text-pink-600">o</span><span class="text-indigo-600">l</span><span>s</span> <span class="text-purple-600">A</span><span class="text-orange-600">I</span></p>
         </div>
@@ -296,7 +305,7 @@
         </div>
     </section>
     <section id="team" class="m-8 mb-3">
-        <div class="text-center text-lg md:text-xl lg:text-2xl font-bold m-4">Special thanks to our exceptional and dedicated team&nbsp;members.</div>
+        <div class="text-center text-lg md:text-xl lg:text-2xl font-bold my-4">Special thanks to our exceptional and dedicated team&nbsp;members.</div>
         <div class="flex items-center justify-center flex-col sm:flex-row">
             <div id="varsha" class="reveal flex items-center flex-col w-[70vw] sm:w-72 h-max sm:h-[20rem] m-1 sm:m-3 md:m-5">
                 <div class="relative">
@@ -355,27 +364,26 @@
         <div class="absolute -z-10 bottom-0">
             <img src="src/bg-yellow.jpg" alt="slant" class="h-[30rem] w-[100rem]">
         </div>
-        <div class="bg-[#4070f4] absolute -z-10 top-28 h-12 w-12"></div>
-        <div class="h-max flex items-center justify-center flex-col md:flex-row">
+        <div class="h-max flex items-center justify-center flex-col md:flex-row mx-10 pb-10 relative">
             <!-- contact form -->
-            <div class="w-[30rem]">
-                <div class="py-10 mr-14">
-                    <div class="font-bold text-5xl flex items-center">Contact Us
-                        <div class="bg-[#4070f4] w-10 h-10 ml-5 rotate-90" style="clip-path: polygon(50% 0%, 0 100%, 100% 100%);"></div>
+            <div id="contact_form" class="w-[25rem] lg:w-[30rem] relative -left-[]">
+                <div class="pb-10 mx-5 lg:ml-5 lg:mr-10 xl:mr-10 xl:ml-5 md:scale-90 xl:scale-100">
+                    <div class="font-bold text-3xl lg:text-4xl xl:text-5xl flex items-center">Contact Us
+                        <div class="bg-[#4070f4] w-7 h-7 lg:w-10 lg:h-10 ml-3 lg:ml-5 rotate-180 md:rotate-90" style="clip-path: polygon(50% 0%, 0 100%, 100% 100%);"></div>
                     </div>
-                    <p class="my-5">Feel free to contact us any time. We'll get back to you as soon as we can!</p>
+                    <p class="my-5 text-sm lg:text-base">Feel free to contact us any time. We'll get back to you as soon as we can!</p>
                     <form action="" id="contactform">
                         <div class="mb-4">
-                            <input type="text" id="name" name="name" placeholder="Name" autocomplete="on" class="w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;">
+                            <input type="text" id="name" name="name" placeholder="Name" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;">
                             <div class="w-full h-0.5 bg-slate-600"></div>
                         </div>
                         <div class="mb-4">
-                            <input type="email" id="email" name="email" placeholder="Email" autocomplete="on" class="w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;">
+                            <input type="email" id="email" name="email" placeholder="Email" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;">
                             <div class="w-full h-0.5 bg-slate-600"></div>
                         </div>
-                        <div class="mb-6">
-                            <textarea id="review" name="review" placeholder="Review" rows="1" autocomplete="on" class="w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;"></textarea>
-                            <div class="w-full h-0.5 bg-slate-800 relative -top-[5.5px]"></div>
+                        <div class="mb-6 relative">
+                            <textarea id="review" name="review" placeholder="Review" rows="1" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;"></textarea>
+                            <div class="w-full h-0.5 bg-slate-800 relative -top-2"></div>
                         </div>
                         <div class="flex items-center justify-center">
                         <button type="submit" class="bg-zinc-950 hover:bg-zinc-900 text-white px-4 py-[0.4rem] text-md rounded-sm w-full transition-all duration-200" style="box-shadow: rgba(0,0,0,0.5) 0px 3px 15px;">Send</button>
@@ -384,54 +392,53 @@
                 </div>
             </div>
             <!-- contact details -->
-            
-            <div id="black_main" class="relative bg-zinc-950 w-[27rem] h-max rounded-md text-white p-8" style="box-shadow: rgba(0,0,0,0.5) 0px 3px 15px;">
-                <div class="bg-[#4070f4] w-8 h-8 absolute -top-5 -left-5"></div>
-                <p class="text-4xl font-semibold">Info</p>
+            <div id="black_main" class="relative bg-zinc-950 w-[23rem] lg:w-[27rem] h-max rounded-md text-white p-5 lg:p-8" style="box-shadow: rgba(0,0,0,0.6) 0px 3px 15px;">
+                <div class="bg-[#4070f4] w-8 h-8 absolute -top-3 -left-3 md:-top-5 md:-left-5"></div>
+                <p class="text-2xl md:text-3xl lg:text-4xl font-semibold">Info</p>
                 <div>
-                    <div class="flex items-center my-4">
+                    <div class="flex items-center my-2 lg:my-4">
                         <div class="flex items-center justify-center h-10 w-10">
-                            <i class="fa-regular fa-envelope text-3xl text-white"></i>
+                            <i class="fa-regular fa-envelope text-xl md:text-2xl lg:text-3xl text-white"></i>
                         </div>
-                        <p class="mx-3 text-xl"><a href="mailto:naremsumanth@gmail.com">naremsumanth@gmail.com</a></p>
+                        <p class="lg:mx-3 text-sm md:text-base lg:text-xl"><a href="mailto:naremsumanth@gmail.com"></a></p>
                     </div>
-                    <div class="flex items-center my-4 ml-1">
+                    <div class="flex items-center my-2 lg:my-4 ml-1">
                         <div class="flex items-center justify-center h-10 w-10">
-                            <i class="fa-solid fa-phone text text-3xl text-white"></i>
+                            <i class="fa-solid fa-phone text text-xl md:text-2xl lg:text-3xl text-white"></i>
                         </div>
-                        <p class="mx-3 text-xl">
+                        <p class="lg:mx-3 text-sm lg:text-xl">
                             <span><a class="my-4" href="tel:+91 8519839971">+918519839971</a></span>, 
                             <span><a class="my-4" href="tel:+91 7801078243">+917801078243</a></span>, 
                             <span><a class="my-4" href="tel:+91 6309357023">+916309357023</a></span>
                         </p>
                     </div>
-                    <div class="flex items-center my-4">
+                    <div class="flex items-center my-2 lg:my-4">
                         <div class="flex items-center justify-center h-10 w-10">
-                            <i class="fa-solid fa-location-dot text-3xl text-white"></i>
+                            <i class="fa-solid fa-location-dot text-xl md:text-2xl lg:text-3xl text-white"></i>
                         </div>
-                        <p class="mx-3 text-xl">Visakhaptanam</p>
+                        <p class="lg:mx-3 text-sm md:text-base lg:text-xl">Visakhaptanam</p>
                     </div>
                 </div>
                 <div id="icons" class="flex items-center justify-center w-full">
                     <div class="relative">
-                        <div id="instagram"><i class="fa-brands fa-instagram text-white text-3xl mx-4"></i></div>
-                        <div class="opacity-0 absolute -z-10 left-[20%] bottom-0 bg-slate-200 p-3 rounded text-black w-max duration-500 transition-all" id="insta-acc">
+                        <div id="instagram"><i class="fa-brands fa-instagram text-white text-2xl lg:text-3xl mx-4"></i></div>
+                        <div class="flex items-center justfy-center flex-col opacity-0 absolute -z-10 left-[20%] bottom-0 bg-transparent border-teal-100 border p-3 rounded text-white w-max duration-500 transition-all" id="insta-acc" style="backdrop-filter: blur(15px);">
                             <div>Sumanth Narem</div>
                             <div>Hima Varsha</div>
                             <div>Ajith Reddy</div>
                         </div>
                     </div>
                     <div class="relative">
-                        <div id="linkedin"><i class="fa-brands fa-linkedin text-white text-3xl mx-4"></i></div>
-                        <div class="opacity-0 absolute -z-10 -left-[80%] bottom-0 bg-slate-200 p-3 rounded text-black w-max duration-500 transition-all" id="linked-acc">
+                        <div id="linkedin"><i class="fa-brands fa-linkedin text-white text-2xl lg:text-3xl mx-4"></i></div>
+                        <div class="flex items-center justfy-center flex-col opacity-0 absolute -z-10 -left-[80%] bottom-0 bg-transparent border-teal-100 border p-3 rounded text-white w-max duration-500 transition-all" id="linked-acc" style="backdrop-filter: blur(15px);">
                             <div>Sumanth Narem</div>
                             <div>Hima Varsha</div>
                             <div>Ajith Reddy</div>
                         </div>
                     </div>
                     <div class="relative">
-                        <div id="github"><i class="fa-brands fa-github text-white text-3xl mx-4"></i></div>
-                        <div class="opacity-0 absolute -z-10 right-[17%] bottom-0 bg-slate-200 p-3 rounded text-black w-max duration-500 transition-all" id="git-acc">
+                        <div id="github"><i class="fa-brands fa-github text-white text-2xl lg:text-3xl mx-4"></i></div>
+                        <div class="flex items-center justfy-center flex-col opacity-0 absolute -z-10 right-[17%] bottom-0 bg-transparent border-teal-100 border p-3 rounded text-white w-max duration-500 transition-all" id="git-acc" style="backdrop-filter: blur(15px);">
                             <div>Sumanth Narem</div>
                             <div>Hima Varsha</div>
                             <div>Ajith Reddy</div>
@@ -441,7 +448,7 @@
             </div>
         </div>
     </section>
-    <footer class="flex justify-center items-center flex-col h-max p-5 text-blue-800 bg-slate-100 w-full" style="box-shadow: rgba(0,0,0,0.50) 10px 0px 20px ;">
+    <footer class="flex justify-center items-center flex-col h-max py-3 px-5 text-indigo-950 bg-slate-100 w-full" style="box-shadow: rgba(0,0,0,0.60) 10px 0px 20px ;">
         <p style="font-family: 'Nosifer', sans-serif;" class="w-max text-2xl sm:text-3xl mb-3"><span class="text-blue-600">T</span><span class="text-yellow-500">o</span><span class="text-pink-600">o</span><span class="text-indigo-600">l</span><span class="text-black">s</span> <span class="text-purple-600">A</span><span class="text-orange-600">I</span></p>
         <div class="text-sm md:text-base text-center font-semibold">
             <p>Designed & Created by <a href="https://www.linkedin.com/in/hima-varsha-barla-817a6824b" target="_blank" class="text-[red]">Hima&nbsp;Varsha</a> & <a href="http://sumanthnarem.vercel.app/" target="_blank" class="text-[red]">Sumanth&nbsp;Narem</a>, <a href="https://www.linkedin.com/in/ajith-kumar-reddy-syamala-11954424b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-[red]">Ajith&nbsp;Reddy</a></p>
