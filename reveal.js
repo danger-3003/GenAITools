@@ -4,9 +4,10 @@ var git = document.getElementById("github");
 
 function unhide(idname)
 {
-    idname.classList.toggle("bottom-[100%]");
     if(idname.classList.contains("-z-10"))
     {
+
+idname.classList.replace("bottom-0","bottom-[100%]");
         idname.classList.replace("opacity-0","opacity-100");
         idname.classList.replace("-z-10","z-10");
     }
