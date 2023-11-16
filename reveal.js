@@ -1,22 +1,44 @@
-var insta=document.getElementById("instagram");
-var git=document.getElementById("github");
-var link=document.getElementById("linkedin");
-console.log(insta,git,link);
-function toggle(variable)
+var insta = document.getElementById("instagram");
+var linked = document.getElementById("linkedin");
+var git = document.getElementById("github");
+
+function unhide(idname)
 {
-    document.getElementBy("body").addEventListener('click',()=>{
-        variable.classList.replace("block","hidden");
-    })
-}
-insta.addEventListener('click',()=>
-{
-    let insta_acc=document.getElementById("insta-acc");
-    if(insta_acc.classList.contains("hidden"))
+    idname.classList.toggle("bottom-[100%]");
+    if(idname.classList.contains("-z-10"))
     {
-        insta_acc.classList.replace("hidden","block");
+        idname.classList.replace("opacity-0","opacity-100");
+        idname.classList.replace("-z-10","z-10");
     }
     else
     {
-        toggle(insta_acc);
+        idname.classList.replace("opacity-100","opacity-0");
+        idname.classList.replace("z-10","-z-10");
     }
+}
+function close_all(idname)
+{
+    idname.classList.replace("opacity-100","opacity-0");
+    idname.classList.replace("z-10","-z-10");
+}
+var instaacc=document.getElementById("insta-acc");
+var gitacc=document.getElementById("git-acc");
+var linkacc=document.getElementById("linked-acc");
+insta.addEventListener('click',()=>
+{
+    unhide(instaacc);
+    close_all(gitacc);
+    close_all(linkacc);
+})
+linked.addEventListener('click',()=>
+{
+    unhide(linkacc);
+    close_all(gitacc);
+    close_all(instaacc);
+})
+git.addEventListener('click',()=>
+{
+    unhide(gitacc);
+    close_all(instaacc);
+    close_all(linkacc);
 })
