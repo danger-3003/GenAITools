@@ -62,6 +62,14 @@
                 width: 90vw;
             }
         }
+        @media screen and (max-width:295px)
+        {
+            #map
+            {
+                justify-content: start;
+                width: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body style="font-family: 'Poppins', sans-serif;">
@@ -400,23 +408,23 @@
                         <div class="flex items-center justify-center h-10 w-10">
                             <i class="fa-regular fa-envelope text-xl md:text-2xl lg:text-3xl text-white"></i>
                         </div>
-                        <p class="lg:mx-3 text-[0.8rem] md:text-base lg:text-xl"><a href="mailto:naremsumanth@gmail.com">naremsumanth@gmail.com</a></p>
+                        <p class="mx-2 lg:mx-3 text-[0.8rem] md:text-base lg:text-xl"><a href="mailto:naremsumanth@gmail.com">naremsumanth@gmail.com</a></p>
                     </div>
-                    <div class="flex items-center my-2 lg:my-4 ml-1">
+                    <div class="flex items-center my-2 lg:my-4 sm:ml-1">
                         <div class="flex items-center justify-center h-10 w-10">
-                            <i class="fa-solid fa-phone text text-xl md:text-2xl lg:text-3xl text-white"></i>
+                            <i class="fa-solid fa-phone text-xl md:text-2xl lg:text-3xl text-white"></i>
                         </div>
-                        <p class="lg:mx-3 text-sm lg:text-xl">
+                        <p class="mx-2 lg:mx-3 text-[0.8rem] lg:text-xl">
                             <span><a class="my-4" href="tel:+91 8519839971">+918519839971</a></span>, 
                             <span><a class="my-4" href="tel:+91 7801078243">+917801078243</a></span>, 
                             <span><a class="my-4" href="tel:+91 6309357023">+916309357023</a></span>
                         </p>
                     </div>
                     <div class="flex items-center my-2 lg:my-4">
-                        <div class="flex items-center justify-center h-10 w-10">
-                            <i class="fa-solid fa-location-dot text-xl md:text-2xl lg:text-3xl text-white"></i>
+                        <div id="map" class="flex items-center justify-center h-10 w-10">
+                            <i class="fa-solid fa-map-location-dot text-xl md:text-2xl lg:text-3xl text-white"></i>
                         </div>
-                        <p class="lg:mx-3 text-sm md:text-base lg:text-xl">Visakhaptanam</p>
+                        <p class="mx-2 lg:mx-3 text-sm md:text-base lg:text-xl">Visakhaptanam</p>
                     </div>
                 </div>
                 <div id="icons" class="flex items-center justify-center w-full">
