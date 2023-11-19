@@ -7,6 +7,7 @@ var nav=document.querySelectorAll(".nav");
 var note=document.getElementById("Notice");
 var cont=document.getElementById("continue");
 var submit=document.getElementById("contactform");
+
 button.addEventListener("click",()=>
 {
     if(button.classList.contains("fa-bars"))
@@ -33,6 +34,7 @@ cont.addEventListener('click', ()=>
 function sendmail()
 {
   let name=document.getElementById("name").value;
+  let email=document.getElementById("email").value;
   let review=document.getElementById("review").value;
   Email.send(
     { 
@@ -42,8 +44,8 @@ function sendmail()
       Password : "1A0F24D947F02134CACB8B684E246B6B0883",
       To : 'naremsumanth@gmail.com',
       From : 'ytprogamer1213@gmail.com',
-      Subject : "Generative AI Tools",
-      Body : name +" have succesfully submited the form.\nReview: "+review
+      Subject : "Website Review Submitted - TOOLS AI",
+      Body : name +" have succesfully submited the form.\n"+name+" review is ' "+review+" '."
     }
     ).then(message => {
       if(message=='OK')
@@ -55,6 +57,19 @@ function sendmail()
         swal("Failed", "Something went wrong", "error");
       }
     });
+    Email.send(
+    { 
+      // SecureToken : "c2c68509-91f0-4fda-9a6b-1d75e209724c",
+      Host : "smtp.elasticemail.com",
+      Username : "ytprogamer1213@gmail.com",
+      Password : "1A0F24D947F02134CACB8B684E246B6B0883",
+      To : email,
+      From : 'ytprogamer1213@gmail.com',
+      Subject : "Website Review Submitted - TOOLS AI",
+      Body : "Hello "+name+",\n\n We've received your response. Thank you for submitting your review. Our team will carefully review the details provided and update our content accordingly. Much appreciated.\n\nBest regards,\n Team-TOOLS AI."
+    }
+    )
+
 }
 
 const firebaseConfig = {
