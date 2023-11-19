@@ -24,68 +24,72 @@ button.addEventListener("click",()=>
         menu.classList.add("opacity-0");
     }
 })
+
 cont.addEventListener('click', ()=>
 {
     note.classList.add("hidden");
 })
 
+function sendmail()
+{
+  let name=document.getElementById("name").value;
+  let review=document.getElementById("review").value;
+  Email.send(
+    { 
+      SecureToken : "c2c68509-91f0-4fda-9a6b-1d75e209724c",
+      To : 'naremsumanth@gmail.com',
+      From : 'ytprogamer1213@gmail.com',
+      Subject : "Generative AI Tools",
+      Body : name +" have succesfully submited the form.\nReview: "+review
+    }
+    ).then(message => {
+      if(message=='OK')
+      {
+        swal("successfull", "We've got your review!", "success");
+      }
+      else
+      {
+        swal("Failed", "Something went wrong", "error");
+      }
+    });
+}
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAIP52nAPuV5yEnSwRKke-c0LdxlSnNp1k",
-    authDomain: "contact-form-610ff.firebaseapp.com",
-    databaseURL: "https://contact-form-610ff-default-rtdb.firebaseio.com",
-    projectId: "contact-form-610ff",
-    storageBucket: "contact-form-610ff.appspot.com",
-    messagingSenderId: "561841052998",
-    appId: "1:561841052998:web:287fb16ae19d512bf91947"
-  };
-  
+  apiKey: "AIzaSyAIP52nAPuV5yEnSwRKke-c0LdxlSnNp1k",
+  authDomain: "contact-form-610ff.firebaseapp.com",
+  databaseURL: "https://contact-form-610ff-default-rtdb.firebaseio.com",
+  projectId: "contact-form-610ff",
+  storageBucket: "contact-form-610ff.appspot.com",
+  messagingSenderId: "561841052998",
+  appId: "1:561841052998:web:287fb16ae19d512bf91947"
+};
+
   // initialize firebase
-  firebase.initializeApp(firebaseConfig);
-  
-  // reference your database
-  var contactformDB = firebase.database().ref("contactform");
-  
-  document.getElementById("contactform").addEventListener("submit", submitForm);
-  
-  function submitForm(e) {
-    e.preventDefault();
-  
-    var name = getElementVal("name");
-    var email = getElementVal("email");
-    var review = getElementVal("review");
-  
-    saveMessages(name, email, review);
-  
-  
-    //   reset the form
-  }
-  
-  const saveMessages = (name, email, review) => {
-    var newcontactform = contactformDB.push();
-  
-    newcontactform.set({
+firebase.initializeApp(firebaseConfig);
+// reference your database
+var contactformDB = firebase.database().ref("contactform");
+document.getElementById("contactform").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+  var name = getElementVal("name");
+  var email = getElementVal("email");
+  var review = getElementVal("review");
+  saveMessages(name, email, review);
+}
+const saveMessages = (name, email, review) => 
+{
+  var newcontactform = contactformDB.push();
+  newcontactform.set(
+    {
       name: name,
       email: email,
       review: review,
     });
-  };
-  
-  const getElementVal = (id) => {
-    return document.getElementById(id).value;
-  };
-
-submit.addEventListener("submit",()=>{
-    var email=document.getElementById("email").value;
-    var name=document.getElementById("name").value;
-    Email.send({
-        SecureToken : "dd276b18-e611-478e-b4f0-233239bb0ae0",
-        To : 'ytprogamer1213@gmail.com',
-        From : email,
-        Subject : "Gen AI Tools form Submited",
-        Body : name+" have succesfully submited the form."
-    }).then(
-      message => alert("Succesfully sent...")
-    );
-    document.getElementById("contactform").reset();
-})
+    
+  document.getElementById("contactform").reset();
+};
+const getElementVal = (id) => 
+{
+  return document.getElementById(id).value;
+};
