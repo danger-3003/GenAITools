@@ -36,7 +36,10 @@ function sendmail()
   let review=document.getElementById("review").value;
   Email.send(
     { 
-      SecureToken : "c2c68509-91f0-4fda-9a6b-1d75e209724c",
+      // SecureToken : "c2c68509-91f0-4fda-9a6b-1d75e209724c",
+      Host : "smtp.elasticemail.com",
+      Username : "ytprogamer1213@gmail.com",
+      Password : "1A0F24D947F02134CACB8B684E246B6B0883",
       To : 'naremsumanth@gmail.com',
       From : 'ytprogamer1213@gmail.com',
       Subject : "Generative AI Tools",
