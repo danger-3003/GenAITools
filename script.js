@@ -45,7 +45,7 @@ function sendmail()
       To : 'naremsumanth@gmail.com',
       From : 'ytprogamer1213@gmail.com',
       Subject : "Website Review Submitted - TOOLS AI",
-      Body : name +" have succesfully submited the form.\n"+name+" review is ' "+review+" '."
+      Body : `<p>`+name +` have successfully submited the form.</p><br><div>`+name+` review is <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">`+review+`</p></div>`
     }
     ).then(message => {
       if(message=='OK')
@@ -66,7 +66,17 @@ function sendmail()
       To : email,
       From : 'ytprogamer1213@gmail.com',
       Subject : "Website Review Submitted - TOOLS AI",
-      Body : "Hello "+name+",\n\n We've received your response. Thank you for submitting your review. Our team will carefully review the details provided and update our content accordingly. Much appreciated.\n\nBest regards,\n Team-TOOLS AI."
+      Body:`<p><strong>Hello `+name+`,</strong></p>
+      <div>
+      <div>We've received your response. Thank you for submitting your review. Our team will carefully review the details provided and update our content accordingly. Much appreciated.</div>
+      <div>&nbsp;</div>
+      <div>Your review:</div>
+      <div>&nbsp;</div>
+      </div>
+      <blockquote>
+      <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">`+review+`</p>
+      </blockquote>
+      <p>Best regards<br><strong>TOOLS-AI</strong> team</p>`
     }
     )
 
