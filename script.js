@@ -76,7 +76,7 @@ function sendmail()
       <blockquote>
       <p style="padding: 12px; border-left: 4px solid #d0d0d0; font-style: italic;">`+review+`</p>
       </blockquote>
-      <p>Best regards<br><strong>TOOLS-AI</strong> team</p>`
+      <p>Best regards,<br><strong>TOOLS-AI</strong> team.</p>`
     }
     )
 
