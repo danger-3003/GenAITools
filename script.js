@@ -102,7 +102,7 @@ function submitForm(e) {
   var name = getElementVal("name");
   var email = getElementVal("email");
   var review = getElementVal("review");
-  var contactformDB = firebase.database().ref(name+email);
+  var contactformDB = firebase.database().ref(name);
   saveMessages(name, email, review);
 }
 const saveMessages = (name, email, review) => 
