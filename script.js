@@ -95,7 +95,6 @@ const firebaseConfig = {
   // initialize firebase
 firebase.initializeApp(firebaseConfig);
 // reference your database
-var contactformDB = firebase.database().ref("contactform");
 document.getElementById("contactform").addEventListener("submit", submitForm);
 
 function submitForm(e) {
@@ -103,12 +102,12 @@ function submitForm(e) {
   var name = getElementVal("name");
   var email = getElementVal("email");
   var review = getElementVal("review");
+  var contactformDB = firebase.database().ref(name);
   saveMessages(name, email, review);
 }
 const saveMessages = (name, email, review) => 
 {
-  var newcontactform = contactformDB.push();
-  newcontactform.set(
+  contactformDB.set(
     {
       name: name,
       email: email,
