@@ -28,7 +28,10 @@ button.addEventListener("click",()=>
 
 cont.addEventListener('click', ()=>
 {
-    note.classList.add("hidden");
+    setTimeout(()=>
+    {
+      note.classList.add("hidden");
+    },700);
 })
 
 function sendmail()
