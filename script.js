@@ -106,9 +106,9 @@ function submitForm(e) {
   var email = getElementVal("email");
   var review = getElementVal("review");
   var contactformDB = firebase.database().ref(name);
-  saveMessages(name, email, review);
+  saveMessages(name, email, review, contactformDB);
 }
-const saveMessages = (name, email, review) => 
+const saveMessages = (name, email, review, contactformDB) => 
 {
   contactformDB.set(
     {
