@@ -393,19 +393,19 @@
                     <p class="my-5 text-sm lg:text-base">Feel free to contact us any time. We'll get back to you as soon as we can!</p>
                     <form action="" id="contactform">
                         <div class="mb-4">
-                            <input type="text" id="name" name="name" placeholder="Name" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;">
+                            <input type="text" required id="name" name="name" placeholder="Name" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;">
                             <div class="w-full h-0.5 bg-slate-600"></div>
                         </div>
                         <div class="mb-4">
-                            <input type="email" id="email" name="email" placeholder="Email" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;">
+                            <input type="email" required id="email" name="email" placeholder="Email" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;">
                             <div class="w-full h-0.5 bg-slate-600"></div>
                         </div>
                         <div class="mb-6 relative">
-                            <textarea id="review" name="review" placeholder="Review" rows="1" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;"></textarea>
+                            <textarea id="review" required name="review" placeholder="Review" rows="1" autocomplete="on" class="text-sm text-slate-900 w-full px-3 outline-none py-1" style="box-shadow: rgba(0, 0, 0, 0.60) 0px 2px 10px;"></textarea>
                             <div class="w-full h-0.5 bg-slate-800 relative -top-2"></div>
                         </div>
                         <div class="flex items-center justify-center">
-                        <button type="submit" onclick="sendmail()" class="bg-zinc-950 hover:bg-zinc-900 text-white px-4 py-[0.4rem] text-md rounded-sm w-full transition-all duration-200" style="box-shadow: rgba(0,0,0,0.5) 0px 3px 15px;">Send</button>
+                            <button type="submit" onclick="sendmail()" class="bg-zinc-950 hover:bg-zinc-900 text-white px-4 py-[0.4rem] text-md rounded-sm w-full transition-all duration-200" style="box-shadow: rgba(0,0,0,0.5) 0px 3px 15px;">Send</button>
                         </div>
                     </form>
                 </div>
